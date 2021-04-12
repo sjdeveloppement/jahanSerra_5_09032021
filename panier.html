@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/336c02fae7.js" crossorigin="anonymous"></script>
+    <title>Orinocam - Panier</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="index.html"><img src="logo.PNG" alt="logo-orinocam"></a>
+            <div><a href="panier.html"><i class="fas fa-shopping-cart fa-2x icoboutique "></i></a></div>
+        </nav>
+    </header>
+    <section><h1>Panier</h1></section>
+    <main id="main-panier">
+<!-- panier -->
+<div id="divtab">
+    <h2>Vos Articles</h2>
+        <table id="tab">
+            <tr>
+                <thead>
+                    <tr>
+                        <th>Appareil photo</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody id="tab-cart">
+                    <!-- cette partie du code sera injecté dans le dom avec js et sera bouclé si il y a plusieurs produits  -->
+                    <!-- <tr> 
+                        <td>nom produit</td>   
+                        <td>1000 €</td>
+                        <td><button id="trash"><i class="fas fa-trash"></i></button></td>
+                    </tr>-->
+                    <!-- fin produits du panier -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total panier :</th>
+                        <td id="TotPrice"> €</td>
+                    </tr>
+                </tfoot>
+            </tr>
+        </table>
+    </div>
+        <!-- fin panier -->
+        <!-- form -->
+    <div id="divform">
+        <h2>Vos coordonnées</h2>
+        <form action="confirm.html" method="POST"  id="form">
+            <div class="form-section">
+                <label for="lastName">Votre Nom :</label>
+                <input type="text" name="lastName" id="lastName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
+            </div>
+            <div class="form-section">
+                <label for="firstName">Votre Prénom :</label>
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
+            </div>
+            <div class="form-section">
+                <label for="address">Votre Adresse :</label>
+                <input type="text" name="address" id="address" pattern="[A-Za-zâéèêûô\s0-9-]{2,100}" required>
+            </div>
+            <div class="form-section">
+                <label for="city">Votre Ville :</label>
+                <input type="text" name="city" id="city"  pattern="[A-Za-zâéèêûô0-9-]{2,50}" required>
+            </div>
+            <div class="form-section">
+                <label for="email">Votre Email :</label>
+                <input type="email" name="email" id="email"  required>
+            </div>
+            <div class="form-section">
+                <input type="submit" value="Ok" class="btn-order" id="order">
+            </div>
+
+        </form>
+    </div>
+    </main>
+    <br>
+    <footer id="footer">
+        <div class="footer-item">
+            <a href="#">Mentions légales</a>
+            <a class="social" aria-label="twitter" href="https://twitter.com/home"><i class="fa fa-twitter icon-md"
+                    aria-hidden="true" title=" Compte twitter"></i></a>
+            <a class="social" aria-label="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook icon-md"
+                    aria-hidden="true" title=" Compte facebook"></i></a>
+            <a href="#">Contactez-Nous</a>
+        </div>
+    </footer>
+<script src="cart.js"></script>
+</body>
+
+</html>
