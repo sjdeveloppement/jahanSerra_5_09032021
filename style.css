@@ -155,7 +155,33 @@ label{
   
   .product4 { grid-area: product4; }
   
-  .product5 { grid-area: product5; }
+  .product5 { grid-area: product5;  }
+/*responsive img product 5 katatone*/
+@media only screen and (min-width: 1599px){
+    .product5 img{
+        height: 507px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 413px){
+    .product5 img{
+        height: 108px;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 640px){
+    .product5 img{
+        height: 120px;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 980px){
+    .product5 img{
+        height: 237px;
+    }
+}
+@media only screen and (min-width: 981px) and (max-width: 1024px){
+    .product5 img{
+        height: 322px;
+    }
+}
 
   .card{
     background-color: black;
@@ -174,6 +200,15 @@ label{
     display: flex;
     justify-content: space-between;
 }
+/*responsive card-item*/
+@media only screen and (max-width: 330px){
+    .card-item{
+        font-size: smaller;
+    }
+    .product5 img{
+        height: 90px;
+    }
+}
 /*page product*/
 .infomadein{
     text-align: center;
@@ -184,6 +219,7 @@ label{
     max-width: 500px;
     
 }
+
 #productImage{
     padding: 10px;
     max-height: 800px;
@@ -239,6 +275,7 @@ select option:not(:checked){
     .footer-product{
         margin-top: 20%;
     }
+    
 }
 /*responsive product desktop */
 @media only screen and (min-width: 980px) and (max-width: 1025px) {
@@ -279,4 +316,22 @@ select option:not(:checked){
   .footer-item :hover{
       text-shadow: peru 1px 1px ;
   }
+  /*responsive footer page confirm mobile*/
+  @media only screen and (min-width: 375px) and (max-width: 640px ) {
+      #footer{
+          margin-top: 35%;
+      }
+      
+  }
+  /*responsive footer page confirm tablets*/
+  @media only screen and (min-width: 640px) {
+    #footer{
+        margin-top: 35%;
+    }
+    #main-confirm{
+        padding-top: 10%;
+        height: 800px;
+    }
+    
+}
   
