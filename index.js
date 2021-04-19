@@ -1,29 +1,29 @@
 main()
-async function  main() {
+async function main() {
     const products = await getProducts()// j'attends que la promesse soit résolu avec await
     //for (product of products) {
-        
-        displayProduct(products)
-        
+
+    displayProduct(products)
+
     //}
 }
 //  fetch get api product
 function getProducts() {
     return fetch("https://oc-p5-api.herokuapp.com/api/cameras")
-    .then(function(httpBodyResponse){
-       return httpBodyResponse.json()
-    })
-    .then(function(products){
-        return products
+        .then(function (httpBodyResponse) {
+            return httpBodyResponse.json()
+        })
+        .then(function (products) {
+            return products
 
-    })
-    .catch(function(error){
-        alert(error)
-    })
+        })
+        .catch(function (error) {
+            alert(error)
+        })
 }
 /*affichage produit liste dynamique*/
-function displayProduct(product){
-    document.getElementById("grid-product").innerHTML+=`
+function displayProduct(product) {
+    document.getElementById("grid-product").innerHTML += `
     <div class="product1"><a href="product.html?id=${product[0]._id}">
                     <div class="card"><img src="${product[0].imageUrl}" alt="image_zurss">
                         <div class="card-item">

@@ -18,12 +18,14 @@
             <div><a href="panier.html"><i class="fas fa-shopping-cart fa-2x icoboutique "></i></a></div>
         </nav>
     </header>
-    <section><h1>Panier</h1></section>
+    <section>
+        <h1>Panier</h1>
+    </section>
     <main id="main-panier">
-<!-- panier -->
-<div id="divtab">
-    <h2>Vos Articles</h2>
-        <table id="tab">       
+        <!-- panier -->
+        <div id="divtab">
+            <h2>Vos Articles</h2>
+            <table id="tab">
                 <thead>
                     <tr>
                         <th>Appareil photo</th>
@@ -44,40 +46,40 @@
                         <th>Total panier :</th>
                         <td id="TotPrice"> €</td>
                     </tr>
-                </tfoot>   
-        </table>
-    </div>
+                </tfoot>
+            </table>
+        </div>
         <!-- fin panier -->
-        <!-- form -->
-    <div id="divform">
-        <h2>Vos coordonnées</h2>
-        <form action="confirm.html" method="POST"  id="form">
-            <div class="form-section">
-                <label for="lastName">Votre Nom :</label>
-                <input type="text" name="lastName" id="lastName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
-            </div>
-            <div class="form-section">
-                <label for="firstName">Votre Prénom :</label>
-                <input type="text" name="firstName" id="firstName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
-            </div>
-            <div class="form-section">
-                <label for="address">Votre Adresse :</label>
-                <input type="text" name="address" id="address" pattern="[A-Za-zâéèêûô\s0-9-]{2,100}" required>
-            </div>
-            <div class="form-section">
-                <label for="city">Votre Ville :</label>
-                <input type="text" name="city" id="city"  pattern="[A-Za-zâéèêûô0-9-]{2,50}" required>
-            </div>
-            <div class="form-section">
-                <label for="email">Votre Email :</label>
-                <input type="email" name="email" id="email"  required>
-            </div>
-            <div class="form-section">
-                <input type="submit" value="Ok" class="btn-order" id="order">
-            </div>
+        <!-- form with regex pattern -->
+        <div id="divform">
+            <h2>Vos coordonnées</h2>
+            <form action="confirm.html" method="POST" id="form">
+                <div class="form-section">
+                    <label for="lastName">Votre Nom :</label>
+                    <input type="text" name="lastName" id="lastName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
+                </div>
+                <div class="form-section">
+                    <label for="firstName">Votre Prénom :</label>
+                    <input type="text" name="firstName" id="firstName" pattern="[A-Za-zâéèêûô-]{2,50}" required>
+                </div>
+                <div class="form-section">
+                    <label for="address">Votre Adresse :</label>
+                    <input type="text" name="address" id="address" pattern="[A-Za-zâéèêûô\s0-9-]{2,100}" required>
+                </div>
+                <div class="form-section">
+                    <label for="city">Votre Ville :</label>
+                    <input type="text" name="city" id="city" pattern="[A-Za-zâéèêûô0-9-]{2,50}" required>
+                </div>
+                <div class="form-section">
+                    <label for="email">Votre Email :</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-section">
+                    <input type="submit" value="Ok" class="btn-order" id="order">
+                </div>
 
-        </form>
-    </div>
+            </form>
+        </div>
     </main>
     <br>
     <footer id="footer">
@@ -90,7 +92,7 @@
             <a href="#">Contactez-Nous</a>
         </div>
     </footer>
-<script src="cart.js"></script>
+    <script src="cart.js"></script>
 </body>
 
 </html>
